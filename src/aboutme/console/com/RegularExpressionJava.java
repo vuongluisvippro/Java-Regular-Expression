@@ -4,9 +4,10 @@ public class RegularExpressionJava {
 	public static void main(String[] args) {
 		// Step 1: Create pattern 
 		// String pattern = "ERR[0-9]{2}:\\s[DNLU].*";
-		String pattern = "ERR[0-9]{2}:\\s.*";
+		// String pattern = "ERR[0-9]{2}:\\s.*";
+		String pattern = "ERR[0-9]{2}:\\s.*(\n)*"; // Cover CASE_6
 		// Step 2: 
-		boolean result = LORENCE_CASE.CASE_5.matches(pattern);
+		boolean result = LORENCE_CASE.CASE_3.matches(pattern);
 		System.out.println("Result: "+result);
 	}
 	
@@ -16,5 +17,6 @@ public class RegularExpressionJava {
 		public static String CASE_3 = "ERR11: No incoming faxes available";
 		public static String CASE_4 = "ERR08: Unknown operation specified or bad POST <POST contents>";
 		public static String CASE_5 = "NGUYEN VAN VUONG";
+		public static String CASE_6 = "ERR11: No incoming faxes available\n";
 	}
 }
